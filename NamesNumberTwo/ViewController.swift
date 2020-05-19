@@ -31,6 +31,8 @@ class ViewController: UIViewController {
         
         loadItems()
     }
+    
+    //MARK: Data Manipulation Methods
 
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         
@@ -72,6 +74,8 @@ class ViewController: UIViewController {
     }
 }
 
+    //MARK: tableView DataSource Methods
+
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemArray.count
@@ -87,6 +91,8 @@ extension ViewController : UITableViewDataSource {
     }
 }
 
+    //MARK: tableView Delegate Methods
+
 extension ViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -101,6 +107,8 @@ extension ViewController : UITableViewDelegate {
     }
     
 }
+
+    //MARK: tableView Search Methods
 
 extension ViewController : UISearchBarDelegate {
     
